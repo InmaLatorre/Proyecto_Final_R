@@ -8,8 +8,8 @@ output:
     toc_float:
       collapsed: false
       Smooth_scroll: false
-    theme: united
-    highlight: tango
+    theme: lumen
+    highlight: breezedark
 ---
 
 ```{r setup, include=FALSE}
@@ -29,9 +29,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Y finalmente, por supuesto, el documento tiene que tener su tabla de contenidos y una estructura y texto... propia de un documento similar a todos los documentos normales que circulan por el mundo. 
 
-## 1. Expresiones Regulares
+## 1. Expresiones Regulares {.tabset .tabset-pills}
 
-Las expresiones regulares (también llamadas _"regex"_ o _"regexp"_) definen patrones que pueden compararse con una cadena . Escriba ```?regex``` para la documentación oficial de R y consulte Regex Docs para obtener más detalles. El 'gotcha' más importante que no se aprenderá en la regex / temas de SO es que la mayoría de las funciones de R-regex necesitan el uso de barras invertidas emparejadas para escapar en un parámetro de pattern .
+Las expresiones regulares (también llamadas _"regex"_ o _"regexp"_) definen patrones que pueden compararse con una cadena . Escriba ```?regex``` para la documentación oficial de R y consulte Regex Docs para obtener más detalles. El **'gotcha'** más importante que no se aprenderá en la regex / temas de SO es que la mayoría de las funciones de R-regex necesitan el uso de barras invertidas emparejadas para escapar en un parámetro de pattern .
 
 ### 1.1 lo que sea
 
