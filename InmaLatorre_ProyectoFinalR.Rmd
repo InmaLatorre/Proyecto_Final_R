@@ -9,7 +9,7 @@ output:
       collapsed: false
       Smooth_scroll: false
     theme: lumen
-    highlight: breezedark
+    highlight: pygments
 ---
 
 ```{r setup, include=FALSE}
@@ -31,20 +31,74 @@ Y finalmente, por supuesto, el documento tiene que tener su tabla de contenidos 
 
 ## 1. Expresiones Regulares {.tabset .tabset-pills}
 
-Las expresiones regulares (también llamadas _"regex"_ o _"regexp"_) definen patrones que pueden compararse con una cadena . Escriba ```?regex``` para la documentación oficial de R y consulte Regex Docs para obtener más detalles. El **'gotcha'** más importante que no se aprenderá en la regex / temas de SO es que la mayoría de las funciones de R-regex necesitan el uso de barras invertidas emparejadas para escapar en un parámetro de pattern .
+Expresión regular, también conocida como _regex_, _regexp_ o expresión racional, es una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres u operaciones de sustituciones.
 
-### 1.1 lo que sea
+A continuación, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet, destacando los pros y los contras de ambas.
 
-### 1.2. lo otro que sea
+### 1.1. RPubs.com
 
-## 2. R Markdown
+[RPubs](http://rpubs.com/ydmarinb/429756)
 
-### 2.1 Recurso Markdown 1
+```{r echo=FALSE}
+prueba <- "Estoy viendo si ejecuta el código"
+gsub("probando", prueba, "viendo")
 
-### 2.2 Recurso Markdown 2
+```
+
+### 1.2. Riptutorial.com
+
+[Riptutorial](https://riptutorial.com/es/r/topic/5748/expresiones-regulares--expresiones-regulares-)
+
+```{r echo=FALSE}
+prueba <- "Estoy viendo si ejecuta el código"
+substring(prueba, 2, 3)
+
+```
+
+## 2. R Markdown {.tabset .tabset-pills}
+
+### 2.1. Bookdown.org
+
+[Bookdown.org](https://bookdown.org/yihui/rmarkdown/html-document.html)
+
+### 2.2. Es.d4ds
+
+[link](https://es.r4ds.hadley.nz/r-markdown.html)
 
 ## 3. Estudio gráfico 
 
+1. Un gráfico generado con `ggplot2`. Que use facetas +5%
+
+```{r echo=FALSE}
+
+library(ggplot2)
+library(ggthemes)
+library(reshape2)
+
+head(iris)
+
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) + 
+  geom_point() + geom_smooth() + 
+  facet_grid(~ Species)
+
+```
 
 
 
+2. Una tabla. Paquete para crear tablas +10%
+
+```{r echo=FALSE}
+library(data.table)
+library(dplyr)
+library(formattable)
+library(tidyr)
+
+library(plotrix)
+
+
+
+
+```
+
+
+GET("http//...") API
