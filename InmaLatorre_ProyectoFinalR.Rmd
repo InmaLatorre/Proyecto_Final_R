@@ -16,56 +16,74 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Curso de iniciación a R
+## Curso de iniciación a R
 
-## Contenido
+### 0. Contenido
 
-1. Una sección en el que indiquen dos páginas con recursos sobre expresiones regulares discutidas (cuál es mejor, cuál es peor, por qué).
-1. Una sección en la que se indiquen dos páginas con recursos sobre markdown y discutirlas como antes.
+1. Dos recursos sobre expresiones regulares discutidas (cuál es mejor, cuál es peor, por qué).
+1. Dos recursos sobre markdown y discutidas como en el punto anterior.
 1. Una sección en la que se carguen, estudien, representen gráficamente unos datos de tu elección. No se trata de hacer un análisis estadístico (está fuera de alcance) pero sí un estudio descriptivo mínimo de los aspectos más relevantes de los datos. Este estudio tiene que contener, al menos:
 
     1. Un gráfico generado con `ggplot2`.
-    2. Una tabla.
+    2. Una tabla. 
 
-Y finalmente, por supuesto, el documento tiene que tener su tabla de contenidos y una estructura y texto... propia de un documento similar a todos los documentos normales que circulan por el mundo. 
-
-## 1. Expresiones Regulares {.tabset .tabset-pills}
+### 1. Expresiones Regulares {.tabset .tabset-pills}
 
 Expresión regular, también conocida como _regex_, _regexp_ o expresión racional, es una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres u operaciones de sustituciones.
 
 A continuación, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet, destacando los pros y los contras de ambas.
 
-### 1.1. RPubs.com
+#### 1.1. RPubs.com
 
 [RPubs](http://rpubs.com/ydmarinb/429756)
 
-```{r echo=FALSE}
-prueba <- "Estoy viendo si ejecuta el código"
-gsub("probando", prueba, "viendo")
+- Contenido:
+- Código:
+- Estética: Armoniosa y clara. Con un patrón lógico.
 
-```
-
-### 1.2. Riptutorial.com
+#### 1.2. Riptutorial.com
 
 [Riptutorial](https://riptutorial.com/es/r/topic/5748/expresiones-regulares--expresiones-regulares-)
 
-```{r echo=FALSE}
-prueba <- "Estoy viendo si ejecuta el código"
-substring(prueba, 2, 3)
+<center>![Vista previa de Riptutorial](Riptutorial.png){width=70%}</center>
+<div/>
 
-```
+- Contenido: Escaso y poco claro. Destaca las cuestiones teóricas básicas, sin poner ejemplos de ello. Para un usuario que se está iniciando con este lenguaje resulta complicado su comprendimiento y aplicación práctica.
+- Código: Limitado. Más allá de enlace a otras páginas web y cambio de color sin un patrón o lógica claros, no existe un código formulado de cierta complejidad.
+- Estética: Estresante. No cumple la normativa ortotipográfica ya que, tiene un color destacado y un tamaño de fuente mayor los subtítulos dentro de las secciones:
 
-## 2. R Markdown {.tabset .tabset-pills}
+CONCLUSIÓN: El nombre de la página (RIP tutorial) es un buen indicativo de la calidad instructiva del mismo. En mi opinión, llamarle tutorial es excederse.
 
-### 2.1. Bookdown.org
+
+### 2. R Markdown {.tabset .tabset-pills}
+
+R Markdown es un formato que permite una fácil creación de documentos, presentaciones dinámicas y informes de R. Markdown es un formato de sintaxis simple para crear documentos en HTML, PDF, y Word.
+
+A continuación, siguiendo con el mismo patrón que en el punto anterior, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet por su contenido, código y estética. 
+
+En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse y crear buenos documentos en formato R Markdown.
+
+#### 2.1. Bookdown.org
 
 [Bookdown.org](https://bookdown.org/yihui/rmarkdown/html-document.html)
 
-### 2.2. Es.d4ds
+- Contenido:
+- Código:
+- Estética: 
 
-[link](https://es.r4ds.hadley.nz/r-markdown.html)
+CONCLUSIÓN:
 
-## 3. Estudio gráfico 
+#### 2.2. r4ds
+
+[r4ds](https://es.r4ds.hadley.nz/r-markdown.html)
+
+- Contenido:
+- Código:
+- Estética: 
+
+CONCLUSIÓN:
+
+### 3. Estudio gráfico 
 
 1. Un gráfico generado con `ggplot2`. Que use facetas +5%
 
