@@ -33,15 +33,20 @@ Expresión regular, también conocida como _regex_, _regexp_ o expresión racion
 
 A continuación, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet, destacando los pros y los contras de ambas.
 
-#### 1.1. RPubs.com
+#### 1.1. RPubs
 
 [RPubs](http://rpubs.com/ydmarinb/429756)
+
+<center>![Vista previa de RPubs](RPubs.png){width=70%}</center>
+<div/>
 
 - Contenido:
 - Código:
 - Estética: Armoniosa y clara. Con un patrón lógico.
 
-#### 1.2. Riptutorial.com
+CONCLUSIÓN:
+
+#### 1.2. Riptutorial
 
 [Riptutorial](https://riptutorial.com/es/r/topic/5748/expresiones-regulares--expresiones-regulares-)
 
@@ -63,9 +68,9 @@ A continuación, siguiendo con el mismo patrón que en el punto anterior, compar
 
 En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse y crear buenos documentos en formato R Markdown.
 
-#### 2.1. Bookdown.org
+#### 2.1. Rstudio
 
-[Bookdown.org](https://bookdown.org/yihui/rmarkdown/html-document.html)
+[Rstudio.com](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf)
 
 - Contenido:
 - Código:
@@ -73,7 +78,7 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 CONCLUSIÓN:
 
-#### 2.2. r4ds
+#### 2.2. R4ds
 
 [r4ds](https://es.r4ds.hadley.nz/r-markdown.html)
 
