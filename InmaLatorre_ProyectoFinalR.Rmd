@@ -22,16 +22,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. Dos recursos sobre expresiones regulares discutidas (cuál es mejor, cuál es peor, por qué).
 1. Dos recursos sobre markdown y discutidas como en el punto anterior.
-1. Una sección en la que se carguen, estudien, representen gráficamente unos datos de tu elección. No se trata de hacer un análisis estadístico (está fuera de alcance) pero sí un estudio descriptivo mínimo de los aspectos más relevantes de los datos. Este estudio tiene que contener, al menos:
+1. Carga, estudio y representación gráfica de unos datos de tu elección.
 
-    1. Un gráfico generado con `ggplot2`.
-    2. Una tabla. 
+- Un gráfico generado con `ggplot2`. Que use facetas +5%
+- Una tabla. Paquete para crear tablas +10%
 
 ### 1. Expresiones Regulares {.tabset .tabset-pills}
 
 Expresión regular, también conocida como _regex_, _regexp_ o expresión racional, es una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres u operaciones de sustituciones.
 
 A continuación, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet, destacando los pros y los contras de ambas.
+
 
 #### 1.1. RPubs
 
@@ -46,12 +47,14 @@ A continuación, compararemos dos páginas de recursos para su aprendizaje que s
 
 CONCLUSIÓN:
 
+
 #### 1.2. Riptutorial
 
 [Riptutorial](https://riptutorial.com/es/r/topic/5748/expresiones-regulares--expresiones-regulares-)
 
 <center>![Vista previa de Riptutorial](Riptutorial.png){width=70%}</center>
 <div/>
+
 
 - Contenido: Escaso y poco claro. Destaca las cuestiones teóricas básicas, sin poner ejemplos de ello. Para un usuario que se está iniciando con este lenguaje resulta complicado su comprendimiento y aplicación práctica.
 - Código: Limitado. Más allá de enlace a otras páginas web y cambio de color sin un patrón o lógica claros, no existe un código formulado de cierta complejidad.
@@ -72,56 +75,85 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 [Rstudio.com](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf)
 
-- Contenido:
-- Código:
-- Estética: 
+<center>![Vista previa de RStudio](RStudio.png){width=70%}</center>
+<div/>
 
-CONCLUSIÓN:
+- Contenido: Conciso y claro. Indicando 
+- Código: Ejecución correcta.
+- Estética: Coherente. Estéticamente agradable, deja claro cómo se ve en un documento Markdown el código descrito
+
+CONCLUSIÓN: Muy buen recurso para, de un vistazo, poder saber lo básico que alcanza un documento RMarkdown.
+
+
+
 
 #### 2.2. R4ds
 
 [r4ds](https://es.r4ds.hadley.nz/r-markdown.html)
 
+<center>![Vista previa de r4ds](r4ds.png){width=70%}</center>
+<div/>
+
+
 - Contenido:
 - Código:
 - Estética: 
 
 CONCLUSIÓN:
 
+
 ### 3. Estudio gráfico 
 
-1. Un gráfico generado con `ggplot2`. Que use facetas +5%
+A continuación, estudiaremos la infertilidad de las mujeres tras un aborto tanto inducido como involuntario:
 
 ```{r echo=FALSE}
+
+library(knitr)
+
+infertilidad <- infert
+
+kable(infertilidad
+       , caption = "Tabla `infert` generada con `kable()`"
+       , align = c('c', 'c', 'c', 'c', 'c', 'c', 'c', 'c')
+       , col.names = c("Educación","Edad","Partos","Prev_Inducido","Caso","Prev_Espontáneo","Estrato","Estrato agrupado")
+       , row.names = TRUE
+       , digits = 1
+       , format.args = list( decimal.mark = ",")
+)
+
+```
+
+Donde:
+
+1. Educación: 0 = 0-5 years, 1 = 6-11 years, 2 = 12+ years
+2. Edad: Edad (en años) del caso
+3. Partos: Cuenta de partos
+4. Prev_Inducido: Número de abortos inducidos previos. 0 = 0, 1 = 1, 2 = 2 o más
+5. Caso: 1 = caso de aborto 0 = control
+6. Prev_Espotonáneo: Número de abortos espontáneos previos. 0 = 0, 1 = 1, 2 = 2 o más
+7. Estrato: Número de conjunto coincidente: 1-83
+8. Estrato agrupado: número de estrato: 1-63
+
+
+```{r echo=FALSE}
+
+data("infert")
+
+infert1 <- infert
+infert1$case <- factor(infert1$case)
+levels(infert1$case) <- c("Control", "Infertilidad")
+
+infert1$stratum <- factor(infert1$stratum)
+infert1$pooled.stratum <- factor(infert1$pooled.stratum)
+
+infert2 <- infert1[(infert1$stratum != 74),]
+
+plot(parity~education, infert2, col= "darkturquoise")
 
 library(ggplot2)
-library(ggthemes)
-library(reshape2)
-
-head(iris)
-
-ggplot(iris, aes(x = Petal.Length, y = Petal.Width)) + 
-  geom_point() + geom_smooth() + 
-  facet_grid(~ Species)
+ggplot(infert2, aes(x = education, y = parity, col= induced + spontaneous)) +
+  geom_point()
 
 ```
 
 
-
-2. Una tabla. Paquete para crear tablas +10%
-
-```{r echo=FALSE}
-library(data.table)
-library(dplyr)
-library(formattable)
-library(tidyr)
-
-library(plotrix)
-
-
-
-
-```
-
-
-GET("http//...") API
