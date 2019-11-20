@@ -102,58 +102,59 @@ CONCLUSIÓN: Muy buen recurso para, de un vistazo, poder saber lo básico que al
 CONCLUSIÓN:
 
 
-### 3. Estudio gráfico 
+### 3. ChickWeight: estudio básico
 
-A continuación, estudiaremos la infertilidad de las mujeres tras un aborto tanto inducido como involuntario:
+A continuación, trabajaremos el conjunto de datos `ChickWeight` que estudia el efecto de diferentes dietas en el peso de los pollitos del muestreo siguiendo la evolución del peso según la edad.
+
+Las diferentes variables recogidas en dicho _dataset_ son las siguientes:
 
 ```{r echo=FALSE}
 
-library(knitr)
+dim(ChickWeight) 
 
-infertilidad <- infert
-
-kable(infertilidad
-       , caption = "Tabla `infert` generada con `kable()`"
-       , align = c('c', 'c', 'c', 'c', 'c', 'c', 'c', 'c')
-       , col.names = c("Educación","Edad","Partos","Prev_Inducido","Caso","Prev_Espontáneo","Estrato","Estrato agrupado")
-       , row.names = TRUE
-       , digits = 1
-       , format.args = list( decimal.mark = ",")
-)
+# Al extraer el tipo de variable con srt, vemos que hemos de cambiar varias variables y recodificarlo como factor para así poder trabajar bien con estos datos para plasmarlos en un gráfico.
 
 ```
 
 Donde:
 
-1. Educación: 0 = 0-5 years, 1 = 6-11 years, 2 = 12+ years
-2. Edad: Edad (en años) del caso
-3. Partos: Cuenta de partos
-4. Prev_Inducido: Número de abortos inducidos previos. 0 = 0, 1 = 1, 2 = 2 o más
-5. Caso: 1 = caso de aborto 0 = control
-6. Prev_Espotonáneo: Número de abortos espontáneos previos. 0 = 0, 1 = 1, 2 = 2 o más
-7. Estrato: Número de conjunto coincidente: 1-83
-8. Estrato agrupado: número de estrato: 1-63
+1. Weigth: Es el peso del pollito, en valor numérico
+1. Time: Edad, en días ,del pollito
+1. Chick: Pollito, ordenado numéricamente como factor
+1. Diet: Tipo de dieta que ha llevado el pollito, representado 1-4 como factor
 
+Un fragmento de dichos datos los podemos ver reflejados en la siguiente tabla:
 
 ```{r echo=FALSE}
 
-data("infert")
+library(knitr)
 
-infert1 <- infert
-infert1$case <- factor(infert1$case)
-levels(infert1$case) <- c("Control", "Infertilidad")
+data("ChickenWeight")
 
-infert1$stratum <- factor(infert1$stratum)
-infert1$pooled.stratum <- factor(infert1$pooled.stratum)
+infertilidad6 <- infert[infert$education == "6-11yrs",]
+infertilidad3 <- infertilidad6[infertilidad6$parity == 3,]
 
-infert2 <- infert1[(infert1$stratum != 74),]
+kable(infertilidad3
+      , caption = "Extracto de la tabla `infert` generada con `kable()`"
+      , align = c('c', 'c', 'c', 'c', 'c', 'c', 'c', 'c')
+      , col.names = c("Educación","Edad","Partos","Prev_Inducido","Caso","Prev_Espontáneo","Estrato","Estrato agrupado")
+      , row.names = TRUE
+      , digits = 1
+      , format.args = list( decimal.mark = ",")
+)
 
-plot(parity~education, infert2, col= "darkturquoise")
-
-library(ggplot2)
-ggplot(infert2, aes(x = education, y = parity, col= induced + spontaneous)) +
-  geom_point()
 
 ```
 
+```{r}
+nrow(ChickWeight)
+```
+
+```{r echo=FALSE}
+library(ggplot2)
+ggplot(infert, 
+       aes(x = education, y = parity, col= induced + spontaneous)) +
+       geom_boxplot(fill = "skyblue")
+
+```
 
