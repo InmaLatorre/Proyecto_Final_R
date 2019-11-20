@@ -110,9 +110,7 @@ Las diferentes variables recogidas en dicho _dataset_ son las siguientes:
 
 ```{r echo=FALSE}
 
-dim(ChickWeight) 
-
-# Al extraer el tipo de variable con srt, vemos que hemos de cambiar varias variables y recodificarlo como factor para así poder trabajar bien con estos datos para plasmarlos en un gráfico.
+colnames(ChickWeight) 
 
 ```
 
@@ -129,15 +127,14 @@ Un fragmento de dichos datos los podemos ver reflejados en la siguiente tabla:
 
 library(knitr)
 
-data("ChickenWeight")
+pollitos <- ChickWeight
 
-infertilidad6 <- infert[infert$education == "6-11yrs",]
-infertilidad3 <- infertilidad6[infertilidad6$parity == 3,]
+dieta1 <- pollitos[pollitos$Diet == 1,]
 
-kable(infertilidad3
-      , caption = "Extracto de la tabla `infert` generada con `kable()`"
-      , align = c('c', 'c', 'c', 'c', 'c', 'c', 'c', 'c')
-      , col.names = c("Educación","Edad","Partos","Prev_Inducido","Caso","Prev_Espontáneo","Estrato","Estrato agrupado")
+kable(dieta1
+      , caption = "Pollitos alimentados con la Dieta1"
+      , align = c('c', 'c', 'c', 'c')
+      , col.names = c("Peso","Edad","Pollito", "Dieta")
       , row.names = TRUE
       , digits = 1
       , format.args = list( decimal.mark = ",")
@@ -147,14 +144,30 @@ kable(infertilidad3
 ```
 
 ```{r}
-nrow(ChickWeight)
+summary(ChickWeight$Diet)
 ```
 
+<center>
 ```{r echo=FALSE}
+
+pollitos <- ChickWeight
+
 library(ggplot2)
-ggplot(infert, 
-       aes(x = education, y = parity, col= induced + spontaneous)) +
-       geom_boxplot(fill = "skyblue")
 
+polluelos <- ggplot(data = pollitos, 
+       aes(x = Time, y = weight, colour = Diet)) +
+       geom_point() +
+       geom_smooth(method = "lm") + 
+       facet_wrap(~Diet, ncol = 2) +
+       scale_y_continuous(position = "right") + 
+       labs(x = "Días", y = "Peso (gr)")
+
+polluelos2 <- polluelos + ggtitle("Aumento de peso según las diferentes dietas")
+
+library(ggthemes)
+
+polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = TRUE,
+                dkpanel = FALSE) + scale_color_economist()
 ```
-
+</center>
+<div/>
