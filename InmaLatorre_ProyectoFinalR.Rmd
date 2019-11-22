@@ -16,16 +16,13 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Curso de iniciación a R
+## **Curso de iniciación a R**
 
 ### 0. Contenido
 
-1. Dos recursos sobre expresiones regulares discutidas (cuál es mejor, cuál es peor, por qué).
-1. Dos recursos sobre markdown y discutidas como en el punto anterior.
+1. Recursos sobre expresiones regulares discutidas: RPubs y Riptutorial.
+1. Recursos sobre markdown discutidas: Rstudio y r4ds
 1. Carga, estudio y representación gráfica de unos datos de tu elección.
-
-- Un gráfico generado con `ggplot2`. Que use facetas +5%
-- Una tabla. Paquete para crear tablas +10%
 
 ### 1. Expresiones Regulares {.tabset .tabset-pills}
 
@@ -117,7 +114,7 @@ colnames(ChickWeight)
 Donde:
 
 1. Weigth: Es el peso del pollito, en valor numérico
-1. Time: Edad, en días ,del pollito
+1. Time: Edad, en días, del pollito
 1. Chick: Pollito, ordenado numéricamente como factor
 1. Diet: Tipo de dieta que ha llevado el pollito, representado 1-4 como factor
 
@@ -125,49 +122,54 @@ Un fragmento de dichos datos los podemos ver reflejados en la siguiente tabla:
 
 ```{r echo=FALSE}
 
+library(reshape2)
+
+names(ChickWeight) <- tolower(names(ChickWeight))
+
+pollitos <- melt(ChickWeight, 
+                id.vars=2:4, 
+                na.rm=TRUE)
+
+poll_diet_temps <- dcast(pollitos, 
+                         diet ~ time, 
+                         mean, 
+                         na.rm=TRUE)
+
 library(knitr)
 
-pollitos <- ChickWeight
-
-dieta1 <- pollitos[pollitos$Diet == 1,]
-
-kable(dieta1
-      , caption = "Pollitos alimentados con la Dieta1"
-      , align = c('c', 'c', 'c', 'c')
-      , col.names = c("Peso","Edad","Pollito", "Dieta")
+kable(poll_diet_temps
+      , caption = "Efecto en el peso en los pollitos según dieta y tiempo"
+      , align = c('r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r')
+      , col.names = c("Dieta","Día_0","Día_2","Día_4","Día_6","Día_8","Día_10","Día_12","Día_14","Día_16","Día_18","Día_20","Día_21")
       , row.names = TRUE
-      , digits = 1
+      , digits = 2
       , format.args = list( decimal.mark = ",")
 )
-
-
-```
-
-```{r}
-summary(ChickWeight$Diet)
 ```
 
 <center>
 ```{r echo=FALSE}
 
-pollitos <- ChickWeight
+polluelos <- ChickWeight
 
 library(ggplot2)
 
-polluelos <- ggplot(data = pollitos, 
-       aes(x = Time, y = weight, colour = Diet)) +
+polluelos1 <- ggplot(data = polluelos, 
+       aes(x = time, y = weight, colour = diet)) +
        geom_point() +
        geom_smooth(method = "lm") + 
-       facet_wrap(~Diet, ncol = 2) +
+       facet_wrap(~diet, ncol = 2) +
        scale_y_continuous(position = "right") + 
        labs(x = "Días", y = "Peso (gr)")
 
-polluelos2 <- polluelos + ggtitle("Aumento de peso según las diferentes dietas")
+polluelos2 <- polluelos1 + ggtitle("Aumento de peso según las diferentes dietas")
 
 library(ggthemes)
 
 polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = TRUE,
                 dkpanel = FALSE) + scale_color_economist()
+
 ```
+
 </center>
 <div/>
