@@ -25,8 +25,7 @@ _Nota:_ Para ver correctamente el trabajo, necesitarás tener instalados los sig
 
 Para comprobarlo, puedes hacer lo siguiente:
 
-<CENTER>
-`pk_instalados <- installed.packages(fields = c("Package", "Version")) 
-%>% as.data.frame()`</CENTER>
+`pk_instalados <- installed.packages(fields = c("Package", "Version")) %>% as.data.frame()`
+
 
 _Inma Latorre_
