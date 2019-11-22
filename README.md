@@ -29,18 +29,4 @@ Para comprobarlo, puedes hacer lo siguiente:
 `pk_instalados <- installed.packages(fields = c("Package", "Version")) 
 %>% as.data.frame()`</CENTER>
 
-
-```{r}
-
-polluelos2 <- polluelos1 + ggtitle("Aumento de peso según las diferentes dietas")
-
-library(ggthemes)
-
-polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = TRUE,
-                dkpanel = FALSE) + scale_color_economist()
-```
-
-polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = TRUE,
-                dkpanel = FALSE) + scale_color_economist()
-
 _Inma Latorre_
