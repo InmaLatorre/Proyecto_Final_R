@@ -125,7 +125,31 @@ Donde:
 1. _Diet:_ Tipo de dieta que ha llevado el pollito, representado 1-4 como factor
 <div/>
 
-Un fragmento de dichos datos los podemos ver reflejados en la siguiente tabla:
+Primero, veremos el cambio del peso de los pollitos con el paso de los días:
+
+```{r echo=FALSE}
+
+names(ChickWeight) <- tolower(names(ChickWeight))
+
+poll_peso_temps <- aggregate(weight ~ time,
+          FUN = mean,
+          data = ChickWeight)
+
+library(knitr)
+
+kable(poll_peso_temps
+      , caption = "Evolución del peso de los pollitos los primeros días de vida"
+      , align = c('l', 'l')
+      , col.names = c("Días", "Peso_Medio")
+      , row.names = FALSE
+      , digits = 2
+      , format.args = list( decimal.mark = ",")
+)
+```
+
+La media de peso el día del nacimiento de los pollitos fue 41.06. La media de peso el último día que se tomaron datos, el 21, fue de 218.69
+
+Después, estudiaremos la evolución del peso con el transcurso de los días en cada una de las dietas:
 
 ```{r echo=FALSE}
 
@@ -154,8 +178,6 @@ kable(poll_diet_temps
 )
 ```
 
-Por último, estudiaremos la evolución del peso con el transcurso de los días en cada una de las dietas:
-
 <center>
 ```{r echo=FALSE}
 
@@ -179,6 +201,8 @@ polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = 
                 dkpanel = FALSE) + scale_color_economist()
 
 ```
-
 </center>
 <div/>
+
+
+Observamos que la Dieta 4 es la más pesada, provocando que los pollitos que siguen dicha dieta tengan una tendencia mayor a engordar. 
