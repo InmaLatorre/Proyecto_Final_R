@@ -22,51 +22,57 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. Recursos sobre expresiones regulares discutidas: RPubs y Riptutorial.
 1. Recursos sobre markdown discutidas: Rstudio y r4ds
-1. Carga, estudio y representación gráfica de unos datos de tu elección.
+1. Estudio descriptivo del _dataset_ contenido en R `ChickWeight`.
 
 ### 1. Expresiones Regulares {.tabset .tabset-pills}
 
+<div style="text-align: justify">
 Expresión regular, también conocida como _regex_, _regexp_ o expresión racional, es una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres u operaciones de sustituciones.
 
 A continuación, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet, destacando los pros y los contras de ambas.
-
+<div/>
 
 #### 1.1. RPubs
 
-[RPubs](http://rpubs.com/ydmarinb/429756)
+[RPubs](http://rpubs.com/ydmarinb/429756) es el primer recurso que vamos a estudiar:
 
 <center>![Vista previa de RPubs](RPubs.png){width=70%}</center>
 <div/>
 
-- Contenido:
-- Código:
-- Estética: Armoniosa y clara. Con un patrón lógico.
 
-CONCLUSIÓN:
+
+- _Contenido:_ Teórico y ejemplificativo. Contiene una estructura lógica, empezando por la teoría básica, para luego adentrarse en la implementación en R con sus debidos ejemplos.
+- _Código:_ Correctamente ejecutado. Se muestra el código cuando es justificado y relevante, es decir, cuando quiere mostrar como se ha llegado a aquello que trata de enseñar.
+- _Estética:_ Armoniosa y clara. Con un patrón coherente sin excesivos formatos de texto especiales.
 
 
 #### 1.2. Riptutorial
 
-[Riptutorial](https://riptutorial.com/es/r/topic/5748/expresiones-regulares--expresiones-regulares-)
+[Riptutorial](https://riptutorial.com/es/r/topic/5748/expresiones-regulares--expresiones-regulares-)  es el segundo recurso que vamos a estudiar:
 
-<center>![Vista previa de Riptutorial](Riptutorial.png){width=70%}</center>
+<center>![Vista previa de Riptutorial](Riptutorial.png){width=60%}</center>
 <div/>
 
 
-- Contenido: Escaso y poco claro. Destaca las cuestiones teóricas básicas, sin poner ejemplos de ello. Para un usuario que se está iniciando con este lenguaje resulta complicado su comprendimiento y aplicación práctica.
-- Código: Limitado. Más allá de enlace a otras páginas web y cambio de color sin un patrón o lógica claros, no existe un código formulado de cierta complejidad.
-- Estética: Estresante. No cumple la normativa ortotipográfica ya que, tiene un color destacado y un tamaño de fuente mayor los subtítulos dentro de las secciones:
 
-CONCLUSIÓN: El nombre de la página (RIP tutorial) es un buen indicativo de la calidad instructiva del mismo. En mi opinión, llamarle tutorial es excederse.
+- _Contenido:_ Escaso y poco claro. Destaca las cuestiones teóricas básicas, sin poner ejemplos de ello. Para un usuario que se está iniciando con este lenguaje resulta complicado su comprendimiento y aplicación práctica.
+- _Código:_ Limitado. Más allá de enlace a otras páginas web y cambio de color sin un patrón o lógica claros, no existe un código formulado de cierta complejidad.
+- _Estética:_ Estresante. No cumple la normativa ortotipográfica ya que, tiene un color destacado y un tamaño de fuente mayor los subtítulos dentro de las secciones.
 
+
+##
+
+<div style="text-align: justify">
+**CONCLUSIÓN:** El nombre de la página (RIP tutorial) es un buen indicativo de la calidad instructiva del mismo. En mi opinión, llamarle tutorial es excederse. Por lo tanto, tras compararlo con los recursos que hay en RPubs, llegamos a la determinación de que este último es mejor para el aprendizaje sobre las _regex_. <div/>
 
 ### 2. R Markdown {.tabset .tabset-pills}
 
+<div style="text-align: justify">
 R Markdown es un formato que permite una fácil creación de documentos, presentaciones dinámicas y informes de R. Markdown es un formato de sintaxis simple para crear documentos en HTML, PDF, y Word.
 
 A continuación, siguiendo con el mismo patrón que en el punto anterior, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet por su contenido, código y estética. 
 
-En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse y crear buenos documentos en formato R Markdown.
+En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse y crear buenos documentos en formato R Markdown. <div/>
 
 #### 2.1. Rstudio
 
@@ -75,13 +81,9 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 <center>![Vista previa de RStudio](RStudio.png){width=70%}</center>
 <div/>
 
-- Contenido: Conciso y claro. Indicando 
-- Código: Ejecución correcta.
-- Estética: Coherente. Estéticamente agradable, deja claro cómo se ve en un documento Markdown el código descrito
-
-CONCLUSIÓN: Muy buen recurso para, de un vistazo, poder saber lo básico que alcanza un documento RMarkdown.
-
-
+- _Contenido:_ Conciso y claro. Indicando 
+- _Código:_ Ejecución correcta.
+- _Estética:_ Coherente. Estéticamente agradable, deja claro cómo se ve en un documento Markdown el código descrito
 
 
 #### 2.2. R4ds
@@ -92,15 +94,19 @@ CONCLUSIÓN: Muy buen recurso para, de un vistazo, poder saber lo básico que al
 <div/>
 
 
-- Contenido:
-- Código:
-- Estética: 
+- _Contenido:_
+- _Código:_
+- _Estética:_ 
 
-CONCLUSIÓN:
+##
+
+<div style="text-align: justify">
+**CONCLUSIÓN:** RStudio es muy buen recurso para, de un vistazo, poder saber lo básico que alcanza un documento RMarkdown. <div/>
 
 
 ### 3. ChickWeight: estudio básico
 
+<div style="text-align: justify">
 A continuación, trabajaremos el conjunto de datos `ChickWeight` que estudia el efecto de diferentes dietas en el peso de los pollitos del muestreo siguiendo la evolución del peso según la edad.
 
 Las diferentes variables recogidas en dicho _dataset_ son las siguientes:
@@ -113,10 +119,11 @@ colnames(ChickWeight)
 
 Donde:
 
-1. Weigth: Es el peso del pollito, en valor numérico
-1. Time: Edad, en días, del pollito
-1. Chick: Pollito, ordenado numéricamente como factor
-1. Diet: Tipo de dieta que ha llevado el pollito, representado 1-4 como factor
+1. _Weight:_ Es el peso del pollito, en valor numérico
+1. _Time:_ Edad, en días, del pollito
+1. _Chick:_ Pollito, ordenado numéricamente como factor
+1. _Diet:_ Tipo de dieta que ha llevado el pollito, representado 1-4 como factor
+<div/>
 
 Un fragmento de dichos datos los podemos ver reflejados en la siguiente tabla:
 
@@ -139,13 +146,15 @@ library(knitr)
 
 kable(poll_diet_temps
       , caption = "Efecto en el peso en los pollitos según dieta y tiempo"
-      , align = c('r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r')
+      , align = c('l', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r', 'r')
       , col.names = c("Dieta","Día_0","Día_2","Día_4","Día_6","Día_8","Día_10","Día_12","Día_14","Día_16","Día_18","Día_20","Día_21")
-      , row.names = TRUE
+      , row.names = FALSE
       , digits = 2
       , format.args = list( decimal.mark = ",")
 )
 ```
+
+Por último, estudiaremos la evolución del peso con el transcurso de los días en cada una de las dietas:
 
 <center>
 ```{r echo=FALSE}
