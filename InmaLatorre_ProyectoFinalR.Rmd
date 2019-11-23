@@ -78,12 +78,12 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 [Rstudio.com](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf)
 
-<center>![Vista previa de RStudio](RStudio.png){width=70%}</center>
+<center>![Vista previa de RStudio](RStudio.png){width=60%}</center>
 <div/>
 
-- _Contenido:_ Conciso y claro. Indicando 
-- _Código:_ Ejecución correcta.
-- _Estética:_ Coherente. Estéticamente agradable, deja claro cómo se ve en un documento Markdown el código descrito
+- _Contenido:_ Conciso y claro. Explicando todos los pasos inciales para crear un documento RMarkdown, indicando cómo cambiar la estética del texto más básica.
+- _Código:_ Sin gran contenido de código de R, más allá de la parte de texto. Por tanto, no hay lugar a errores en ejecución del mismo.
+- _Estética:_ Coherente. Estéticamente agradable, deja claro cómo se ve en un documento RMarkdown el la teoría descrita.
 
 
 #### 2.2. R4ds
@@ -94,14 +94,14 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 <div/>
 
 
-- _Contenido:_
-- _Código:_
-- _Estética:_ 
+- _Contenido:_ Estructurado y extenso. Para un aprendizaje en mayor profundidad de su uso. Buen material para aprneder cosas más allá de un documento básico.
+- _Código:_ Muy bueno. Muestra a propósito código en la parte instructora, pero no lo hace en las partes que no es necesario.
+- _Estética:_ Docente. Siguiendo la estructura de un libro académico, no se excede en florituras innecesarias.
 
 ##
 
 <div style="text-align: justify">
-**CONCLUSIÓN:** RStudio es muy buen recurso para, de un vistazo, poder saber lo básico que alcanza un documento RMarkdown. <div/>
+**CONCLUSIÓN:** RStudio es muy buen recurso para, de un vistazo, poder saber lo básico que alcanza un documento RMarkdown. Sin embargo, si lo que se quiere es un conocimiento más profundo, es mejor recurrir a r4ds. <div/>
 
 
 ### 3. ChickWeight: estudio básico
@@ -111,7 +111,7 @@ A continuación, trabajaremos el conjunto de datos `ChickWeight` que estudia el 
 
 Las diferentes variables recogidas en dicho _dataset_ son las siguientes:
 
-```{r echo=FALSE}
+```{r nombres_variables, echo=FALSE}
 
 colnames(ChickWeight) 
 
@@ -127,7 +127,7 @@ Donde:
 
 Primero, veremos el cambio del peso de los pollitos con el paso de los días:
 
-```{r echo=FALSE}
+```{r peso_dias, echo=FALSE}
 
 names(ChickWeight) <- tolower(names(ChickWeight))
 
@@ -151,7 +151,7 @@ La media de peso el día del nacimiento de los pollitos fue 41.06. La media de p
 
 Después, estudiaremos la evolución del peso con el transcurso de los días en cada una de las dietas:
 
-```{r echo=FALSE}
+```{r dieta_dias_tabla, echo=FALSE}
 
 library(reshape2)
 
@@ -179,7 +179,7 @@ kable(poll_diet_temps
 ```
 
 <center>
-```{r echo=FALSE}
+```{r dieta_dias_ggplot, echo=FALSE}
 
 polluelos <- ChickWeight
 
