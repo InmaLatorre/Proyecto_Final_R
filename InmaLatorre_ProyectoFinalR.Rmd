@@ -107,7 +107,7 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 ### 3. ChickWeight: estudio básico
 
 <div style="text-align: justify">
-A continuación, trabajaremos el conjunto de datos `ChickWeight` que estudia el efecto de diferentes dietas en el peso de los pollitos del muestreo siguiendo la evolución del peso según la edad.
+A continuación, trabajaremos el conjunto de datos `ChickWeight` que tiene un total de 548 filas y 4 columnas que representa la progresión del peso de varios pollitos. Casa pollito es alimentado con una dieta específica, de las cuales hay cuatro tipos.
 
 Las diferentes variables recogidas en dicho _dataset_ son las siguientes:
 
@@ -119,13 +119,30 @@ colnames(ChickWeight)
 
 Donde:
 
-1. _Weight:_ Es el peso del pollito, en valor numérico
+1. _Weight:_ Es el peso del pollito, en gramos
 1. _Time:_ Edad, en días, del pollito
 1. _Chick:_ Pollito, ordenado numéricamente como factor
 1. _Diet:_ Tipo de dieta que ha llevado el pollito, representado 1-4 como factor
 <div/>
 
-Primero, veremos el cambio del peso de los pollitos con el paso de los días:
+Veamos, en primer lugar, algunos estadísticos descriptivos básicos del peso de los pollitos:
+
+- Mediana: 
+```{r mediana, echo=FALSE}
+median(ChickWeight$weight)
+```
+
+- Desviación: 
+```{r desviacion, echo=FALSE}
+sd(ChickWeight$weight)
+```
+
+- Media: 
+```{r media, echo=FALSE}
+mean(ChickWeight$weight)
+```
+
+En segundo lugar, estudiaremos el cambio del peso de los pollitos con el paso de los días:
 
 ```{r peso_dias, echo=FALSE}
 
@@ -147,9 +164,16 @@ kable(poll_peso_temps
 )
 ```
 
-La media de peso el día del nacimiento de los pollitos fue 41.06. La media de peso el último día que se tomaron datos, el 21, fue de 218.69
+La media de peso el día del nacimiento de los pollitos fue 41.06 gramos. La media de peso el último día que se tomaron datos, el 21, fue de 218.69 gramos.
 
-Después, estudiaremos la evolución del peso con el transcurso de los días en cada una de las dietas:
+Por último, estudiaremos la evolución del peso con el transcurso de los días en cada una de las dietas para poder contrastar las siguientes hipótesis:
+
+
+_H<sub>0</sub>:_ Todas las dietas tienen el mismo efecto en el peso de los pollitos
+
+_H<sub>1</sub>:_ Las dietas tienen diferentes efectos en el peso de los pollitos
+
+
 
 ```{r dieta_dias_tabla, echo=FALSE}
 
@@ -204,5 +228,6 @@ polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = 
 </center>
 <div/>
 
+Tanto la tabla como la gráfica de puntos por facetas muestra que los pollitos engordan con el paso del tiempo. Aparentemente la desviación estándar de pesos también se incrementan.
 
-Observamos que la Dieta 4 es la más pesada, provocando que los pollitos que siguen dicha dieta tengan una tendencia mayor a engordar. 
+Observamos que la Dieta 3 es la más pesada, provocando que los pollitos que siguen dicha dieta tengan una tendencia mayor a engordar. 
