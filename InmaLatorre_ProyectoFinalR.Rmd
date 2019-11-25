@@ -230,4 +230,5 @@ polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = 
 
 Tanto la tabla como la gráfica de puntos por facetas muestra que los pollitos engordan con el paso del tiempo. Aparentemente la desviación estándar de pesos también se incrementan.
 
-Observamos que la Dieta 3 es la más pesada, provocando que los pollitos que siguen dicha dieta tengan una tendencia mayor a engordar. 
+Observamos que la Dieta 3 es la más pesada, provocando que los pollitos que siguen dicha dieta tengan una tendencia mayor a engordar.  
+
