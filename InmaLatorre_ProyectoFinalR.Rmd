@@ -16,9 +16,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## **Curso de iniciación a R**
+# **Curso de iniciación a R**
 
-### 0. Contenido
+## Contenido
 
 1. Recursos sobre expresiones regulares discutidas: RPubs y Riptutorial.
 1. Recursos sobre markdown discutidas: Rstudio y r4ds
@@ -65,6 +65,7 @@ A continuación, compararemos dos páginas de recursos para su aprendizaje que s
 <div style="text-align: justify">
 **CONCLUSIÓN:** El nombre de la página (RIP tutorial) es un buen indicativo de la calidad instructiva del mismo. En mi opinión, llamarle tutorial es excederse. Por lo tanto, tras compararlo con los recursos que hay en RPubs, llegamos a la determinación de que este último es mejor para el aprendizaje sobre las _regex_. <div/>
 
+
 ### 2. R Markdown {.tabset .tabset-pills}
 
 <div style="text-align: justify">
@@ -76,7 +77,7 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 #### 2.1. Rstudio
 
-[Rstudio.com](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf)
+[Rstudio.com](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf) es el primer recurso que vamos a estudiar:
 
 <center>![Vista previa de RStudio](RStudio.png){width=60%}</center>
 <div/>
@@ -88,9 +89,9 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 #### 2.2. R4ds
 
-[r4ds](https://es.r4ds.hadley.nz/r-markdown.html)
+[r4ds](https://es.r4ds.hadley.nz/r-markdown.html) es el segundo recurso que vamos a estudiar:
 
-<center>![Vista previa de r4ds](r4ds.png){width=70%}</center>
+<center margin: auto>![Vista previa de r4ds](r4ds.png){width=70%}</center>
 <div/>
 
 
@@ -168,12 +169,11 @@ La media de peso el día del nacimiento de los pollitos fue 41.06 gramos. La med
 
 Por último, estudiaremos la evolución del peso con el transcurso de los días en cada una de las dietas para poder contrastar las siguientes hipótesis:
 
+- _H<sub>0</sub>:_ Todas las dietas tienen el mismo efecto en el peso de los pollitos
 
-_H<sub>0</sub>:_ Todas las dietas tienen el mismo efecto en el peso de los pollitos
+- _H<sub>1</sub>:_ Las dietas tienen diferentes efectos en el peso de los pollitos
 
-_H<sub>1</sub>:_ Las dietas tienen diferentes efectos en el peso de los pollitos
-
-
+Para un mejor entendimiento y visualización de ello, trabajamos con los datos modificados con la librería `reshape2` y los plasmamos en una tabla y un gráfico por facetas:
 
 ```{r dieta_dias_tabla, echo=FALSE}
 
