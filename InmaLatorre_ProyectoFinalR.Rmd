@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. Recursos sobre expresiones regulares discutidas: RPubs y Riptutorial.
 1. Recursos sobre markdown discutidas: Rstudio y r4ds
-1. Estudio descriptivo del _dataset_ contenido en R `ChickWeight`.
+1. Estudio descriptivo del _dataset_ contenido en R ChickWeight.
 
 ### 1. Expresiones Regulares {.tabset .tabset-pills}
 
@@ -230,7 +230,7 @@ polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = 
 ```
 </center>
 <div/>
-<center>![Vista previa de blanco](Blanco.png){width=60%}</center>
+<center>![Vista previa de blanco](Blanco.png){width=20%}</center>
 <div/>
 
 <div style="text-align: justify">
@@ -238,4 +238,7 @@ Tanto la tabla como la gráfica de puntos por facetas muestra que los pollitos e
 
 Observamos que la Dieta 3 es la más pesada, provocando que los pollitos que siguen dicha dieta tengan una tendencia mayor a engordar.  
 </div>
+
+
+
 
