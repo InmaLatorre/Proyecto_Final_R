@@ -38,8 +38,8 @@ A continuación, compararemos dos páginas de recursos para su aprendizaje que s
 
 <center>![Vista previa de RPubs](RPubs.png){width=70%}</center>
 <div/>
-
-
+<center>![Vista previa de blanco](Blanco.png){width=30%}</center>
+<div/>
 
 - _Contenido:_ Teórico y ejemplificativo. Contiene una estructura lógica, empezando por la teoría básica, para luego adentrarse en la implementación en R con sus debidos ejemplos.
 - _Código:_ Correctamente ejecutado. Se muestra el código cuando es justificado y relevante, es decir, cuando quiere mostrar como se ha llegado a aquello que trata de enseñar.
@@ -52,8 +52,8 @@ A continuación, compararemos dos páginas de recursos para su aprendizaje que s
 
 <center>![Vista previa de Riptutorial](Riptutorial.png){width=60%}</center>
 <div/>
-
-
+<center>![Vista previa de blanco](Blanco.png){width=30%}</center>
+<div/>
 
 - _Contenido:_ Escaso y poco claro. Destaca las cuestiones teóricas básicas, sin poner ejemplos de ello. Para un usuario que se está iniciando con este lenguaje resulta complicado su comprendimiento y aplicación práctica.
 - _Código:_ Limitado. Más allá de enlace a otras páginas web y cambio de color sin un patrón o lógica claros, no existe un código formulado de cierta complejidad.
@@ -81,6 +81,8 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 <center>![Vista previa de RStudio](RStudio.png){width=60%}</center>
 <div/>
+<center>![Vista previa de blanco](Blanco.png){width=30%}</center>
+<div/>
 
 - _Contenido:_ Conciso y claro. Explicando todos los pasos inciales para crear un documento RMarkdown, indicando cómo cambiar la estética del texto más básica.
 - _Código:_ Sin gran contenido de código de R, más allá de la parte de texto. Por tanto, no hay lugar a errores en ejecución del mismo.
@@ -91,15 +93,16 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 [r4ds](https://es.r4ds.hadley.nz/r-markdown.html) es el segundo recurso que vamos a estudiar:
 
-<center margin: auto>![Vista previa de r4ds](r4ds.png){width=70%}</center>
+<center>![Vista previa de r4ds](r4ds.png){width=70%}</center>
 <div/>
-
+<center>![Vista previa de blanco](Blanco.png){width=30%}</center>
+<div/>
 
 - _Contenido:_ Estructurado y extenso. Para un aprendizaje en mayor profundidad de su uso. Buen material para aprneder cosas más allá de un documento básico.
 - _Código:_ Muy bueno. Muestra a propósito código en la parte instructora, pero no lo hace en las partes que no es necesario.
 - _Estética:_ Docente. Siguiendo la estructura de un libro académico, no se excede en florituras innecesarias.
 
-##
+## 
 
 <div style="text-align: justify">
 **CONCLUSIÓN:** RStudio es muy buen recurso para, de un vistazo, poder saber lo básico que alcanza un documento RMarkdown. Sin embargo, si lo que se quiere es un conocimiento más profundo, es mejor recurrir a r4ds. <div/>
@@ -227,8 +230,8 @@ polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = 
 ```
 </center>
 <div/>
-
-<span style="color:white">Pongo esta línea en blanco para ganar espacio entre el gráfico por facetas y el texto que lo analiza</span>
+<center>![Vista previa de blanco](Blanco.png){width=60%}</center>
+<div/>
 
 <div style="text-align: justify">
 Tanto la tabla como la gráfica de puntos por facetas muestra que los pollitos engordan con el paso del tiempo. Aparentemente la desviación estándar de pesos también se incrementan.
