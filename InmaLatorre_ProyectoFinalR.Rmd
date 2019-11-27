@@ -24,27 +24,31 @@ knitr::opts_chunk$set(echo = TRUE)
 1. Recursos sobre markdown discutidas: Rstudio y r4ds
 1. Estudio descriptivo del _dataset_ contenido en R ChickWeight.
 
-### 1. Expresiones Regulares {.tabset .tabset-pills}
+### 1. Expresiones Regulares
 
 <div style="text-align: justify">
 Expresión regular, también conocida como _regex_, _regexp_ o expresión racional, es una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres u operaciones de sustituciones.
 
-A continuación, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet, destacando los pros y los contras de ambas.
-<div/>
+A continuación, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet, fijándonos en su contenido, código y estética.
 
-#### 1.1. RPubs
+Con ello la **conclusión** será la siguiente: que el nombre de la página (RIP tutorial) es un buen indicativo de la calidad instructiva del mismo. En mi opinión, llamarle tutorial es excederse. Por lo tanto, tras compararlo con los recursos que hay en RPubs, llegamos a la determinación de que este último es mejor para el aprendizaje sobre las _regex_. <div/>
+
+<br>
+
+#### 1.1 RPubs
 
 [RPubs](http://rpubs.com/ydmarinb/429756) es el primer recurso que vamos a estudiar:
 
 <center>![Vista previa de RPubs](RPubs.png){width=70%}</center>
 <div/>
-<center>![Vista previa de blanco](Blanco.png){width=30%}</center>
-<div/>
+  
+<br>
 
 - _Contenido:_ Teórico y ejemplificativo. Contiene una estructura lógica, empezando por la teoría básica, para luego adentrarse en la implementación en R con sus debidos ejemplos.
 - _Código:_ Correctamente ejecutado. Se muestra el código cuando es justificado y relevante, es decir, cuando quiere mostrar como se ha llegado a aquello que trata de enseñar.
 - _Estética:_ Armoniosa y clara. Con un patrón coherente sin excesivos formatos de texto especiales.
 
+<br>
 
 #### 1.2. Riptutorial
 
@@ -52,28 +56,25 @@ A continuación, compararemos dos páginas de recursos para su aprendizaje que s
 
 <center>![Vista previa de Riptutorial](Riptutorial.png){width=60%}</center>
 <div/>
-<center>![Vista previa de blanco](Blanco.png){width=30%}</center>
-<div/>
+
+<br>
 
 - _Contenido:_ Escaso y poco claro. Destaca las cuestiones teóricas básicas, sin poner ejemplos de ello. Para un usuario que se está iniciando con este lenguaje resulta complicado su comprendimiento y aplicación práctica.
 - _Código:_ Limitado. Más allá de enlace a otras páginas web y cambio de color sin un patrón o lógica claros, no existe un código formulado de cierta complejidad.
-- _Estética:_ Estresante. No cumple la normativa ortotipográfica ya que, tiene un color destacado y un tamaño de fuente mayor los subtítulos dentro de las secciones.
+- _Estética:_ Estresante. No cumple la normativa ortotipográfica ya que, tiene un color destacado y un tamaño de fuente mayor los subtítulos dentro de las secciones. <div/>
 
 
-##
-
-<div style="text-align: justify">
-**CONCLUSIÓN:** El nombre de la página (RIP tutorial) es un buen indicativo de la calidad instructiva del mismo. En mi opinión, llamarle tutorial es excederse. Por lo tanto, tras compararlo con los recursos que hay en RPubs, llegamos a la determinación de que este último es mejor para el aprendizaje sobre las _regex_. <div/>
-
-
-### 2. R Markdown {.tabset .tabset-pills}
+### 2. R Markdown{.tabset .tabset-pills} 
 
 <div style="text-align: justify">
 R Markdown es un formato que permite una fácil creación de documentos, presentaciones dinámicas y informes de R. Markdown es un formato de sintaxis simple para crear documentos en HTML, PDF, y Word.
 
 A continuación, siguiendo con el mismo patrón que en el punto anterior, compararemos dos páginas de recursos para su aprendizaje que se pueden encontrar en Internet por su contenido, código y estética. 
 
-En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse y crear buenos documentos en formato R Markdown. <div/>
+En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse y crear buenos documentos en formato R Markdown. 
+Dicha **conclusión** es que RStudio es muy buen recurso para, de un vistazo, poder saber lo básico que alcanza un documento RMarkdown. Sin embargo, si lo que se quiere es un conocimiento más profundo, es mejor recurrir a r4ds. <div/>
+
+<br>
 
 #### 2.1. Rstudio
 
@@ -81,13 +82,13 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 <center>![Vista previa de RStudio](RStudio.png){width=60%}</center>
 <div/>
-<center>![Vista previa de blanco](Blanco.png){width=30%}</center>
-<div/>
+
+<br>
 
 - _Contenido:_ Conciso y claro. Explicando todos los pasos inciales para crear un documento RMarkdown, indicando cómo cambiar la estética del texto más básica.
 - _Código:_ Sin gran contenido de código de R, más allá de la parte de texto. Por tanto, no hay lugar a errores en ejecución del mismo.
 - _Estética:_ Coherente. Estéticamente agradable, deja claro cómo se ve en un documento RMarkdown el la teoría descrita.
-
+<div/>
 
 #### 2.2. R4ds
 
@@ -95,23 +96,18 @@ En base a dichos puntos, concluiremos cuál es mejor y cuál peor para formarse 
 
 <center>![Vista previa de r4ds](r4ds.png){width=70%}</center>
 <div/>
-<center>![Vista previa de blanco](Blanco.png){width=30%}</center>
-<div/>
 
-- _Contenido:_ Estructurado y extenso. Para un aprendizaje en mayor profundidad de su uso. Buen material para aprneder cosas más allá de un documento básico.
-- _Código:_ Muy bueno. Muestra a propósito código en la parte instructora, pero no lo hace en las partes que no es necesario.
-- _Estética:_ Docente. Siguiendo la estructura de un libro académico, no se excede en florituras innecesarias.
+<br>
 
-## 
-
-<div style="text-align: justify">
-**CONCLUSIÓN:** RStudio es muy buen recurso para, de un vistazo, poder saber lo básico que alcanza un documento RMarkdown. Sin embargo, si lo que se quiere es un conocimiento más profundo, es mejor recurrir a r4ds. <div/>
+- _Contenido_: Estructurado y extenso. Para un aprendizaje en mayor profundidad de su uso. Buen material para aprneder cosas más allá de un documento básico.
+- _Código_: Muy bueno. Muestra a propósito código en la parte instructora, pero no lo hace en las partes que no es necesario.
+- _Estética_: Docente. Siguiendo la estructura de un libro académico, no se excede en florituras innecesarias.
 
 
 ### 3. ChickWeight: estudio básico
 
 <div style="text-align: justify">
-A continuación, trabajaremos el conjunto de datos `ChickWeight` que tiene un total de 548 filas y 4 columnas que representa la progresión del peso de varios pollitos. Casa pollito es alimentado con una dieta específica, de las cuales hay cuatro tipos.
+A continuación, trabajaremos el conjunto de datos **ChickWeight** que tiene un total de 548 filas y 4 columnas que representa la progresión del peso de varios pollitos. Casa pollito es alimentado con una dieta específica, de las cuales hay cuatro tipos.
 
 Las diferentes variables recogidas en dicho _dataset_ son las siguientes:
 
@@ -129,6 +125,7 @@ Donde:
 1. _Diet:_ Tipo de dieta que ha llevado el pollito, representado 1-4 como factor
 <div/>
 
+<br>
 Veamos, en primer lugar, algunos estadísticos descriptivos básicos del peso de los pollitos:
 
 - Mediana: 
@@ -146,6 +143,13 @@ sd(ChickWeight$weight)
 mean(ChickWeight$weight)
 ```
 
+- Coeficiente de variación de Pearson: 
+```{r coef_Pearson, echo=FALSE}
+sd(ChickWeight$weight) / mean(ChickWeight$weight)
+```
+Nuestra muestra es, por tanto, dispersa, dado que el coeficiente de variación el de Pearson está más cerca de 1 que de 0.
+
+<br>
 En segundo lugar, estudiaremos el cambio del peso de los pollitos con el paso de los días:
 
 ```{r peso_dias, echo=FALSE}
@@ -168,8 +172,9 @@ kable(poll_peso_temps
 )
 ```
 
-La media de peso el día del nacimiento de los pollitos fue 41.06 gramos. La media de peso el último día que se tomaron datos, el 21, fue de 218.69 gramos.
+La media de peso el día del nacimiento de los pollitos fue 41.06 gramos. La media de peso el último día que se tomaron datos, el 21, fue de 218.69 gramos. Es decir, en el periodo de tiempo transcurrido, de media multplican su peso más de 5 veces.
 
+<br>
 Por último, estudiaremos la evolución del peso con el transcurso de los días en cada una de las dietas para poder contrastar las siguientes hipótesis:
 
 - _H<sub>0</sub>:_ Todas las dietas tienen el mismo efecto en el peso de los pollitos
@@ -230,15 +235,14 @@ polluelos2 + theme_economist(base_size = 10, base_family = "sans", horizontal = 
 ```
 </center>
 <div/>
-<center>![Vista previa de blanco](Blanco.png){width=20%}</center>
-<div/>
 
+<br>
 <div style="text-align: justify">
 Tanto la tabla como la gráfica de puntos por facetas muestra que los pollitos engordan con el paso del tiempo. Aparentemente la desviación estándar de pesos también se incrementan.
 
-Observamos que la Dieta 3 es la más pesada, provocando que los pollitos que siguen dicha dieta tengan una tendencia mayor a engordar.  
+Observamos que la Dieta 3 es la más pesada, provocando que los pollitos que siguen dicha dieta tengan una tendencia mayor a engordar. Si bien, no dista mucho del componente calórico que pueda tener la Dieta 4 que muchos días provoca que el peso medio de los pollitos sea mayor que la Dieta 3.
+
+La Dieta 1, sin embargo, es la más ligera, cuya media de peso más alta (el útlimo día de datos, es decir, el día 21) es alcanzada por la Dieta 3 y 4 ya en el día 16.
+
 </div>
-
-
-
 
