@@ -244,5 +244,4 @@ Observamos que la Dieta 3 es la más pesada, provocando que los pollitos que sig
 
 La Dieta 1, sin embargo, es la más ligera, cuya media de peso más alta (el útlimo día de datos, es decir, el día 21) es alcanzada por la Dieta 3 y 4 ya en el día 16.
 
-</div>
-
+<br>
