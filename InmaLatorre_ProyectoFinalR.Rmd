@@ -39,7 +39,7 @@ Con ello la **conclusión** será la siguiente: que el nombre de la página (RIP
 
 [RPubs](http://rpubs.com/ydmarinb/429756) es el primer recurso que vamos a estudiar:
 
-<center>![Vista previa de RPubs](RPubs.png){width=70%}</center>
+<center>![Vista previa de RPubs](resources/RPubs.png){width=70%}</center>
 <div/>
   
 <br>
@@ -54,7 +54,7 @@ Con ello la **conclusión** será la siguiente: que el nombre de la página (RIP
 
 [Riptutorial](https://riptutorial.com/es/r/topic/5748/expresiones-regulares--expresiones-regulares-)  es el segundo recurso que vamos a estudiar:
 
-<center>![Vista previa de Riptutorial](Riptutorial.png){width=60%}</center>
+<center>![Vista previa de Riptutorial](resources/Riptutorial.png){width=60%}</center>
 <div/>
 
 <br>
@@ -80,7 +80,7 @@ Dicha **conclusión** es que RStudio es muy buen recurso para, de un vistazo, po
 
 [Rstudio.com](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-spanish.pdf) es el primer recurso que vamos a estudiar:
 
-<center>![Vista previa de RStudio](RStudio.png){width=60%}</center>
+<center>![Vista previa de RStudio](resources/RStudio.png){width=60%}</center>
 <div/>
 
 <br>
@@ -94,7 +94,7 @@ Dicha **conclusión** es que RStudio es muy buen recurso para, de un vistazo, po
 
 [r4ds](https://es.r4ds.hadley.nz/r-markdown.html) es el segundo recurso que vamos a estudiar:
 
-<center>![Vista previa de r4ds](r4ds.png){width=70%}</center>
+<center>![Vista previa de r4ds](resources/r4ds.png){width=70%}</center>
 <div/>
 
 <br>
@@ -245,3 +245,5 @@ Observamos que la Dieta 3 es la más pesada, provocando que los pollitos que sig
 La Dieta 1, sin embargo, es la más ligera, cuya media de peso más alta (el útlimo día de datos, es decir, el día 21) es alcanzada por la Dieta 3 y 4 ya en el día 16.
 
 <br>
+
+
